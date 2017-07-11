@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @CrossOrigin(origins = "http://localhost:8080/", maxAge = 3600)
 @Controller
 public class MainController {
-	@RequestMapping("/")
+	@RequestMapping("/v1/")
 	@ResponseBody
 	public String index(){
 		String response = "Bienvenido a SPCELL";
