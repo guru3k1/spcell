@@ -31,9 +31,9 @@ public class DataBaseConfiguration {
 		public DataSource dataSource(){
 			DriverManagerDataSource dataSource = new DriverManagerDataSource();
 			dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-			dataSource.setUrl("jdbc:mysql://localhost:3306/spcell");
-			dataSource.setUsername("spcell");
-			dataSource.setPassword("spcell");
+			dataSource.setUrl("jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10184983");
+			dataSource.setUsername("sql10184983");
+			dataSource.setPassword("B3Rwszmnsy");
 			
 			return dataSource;
 		}

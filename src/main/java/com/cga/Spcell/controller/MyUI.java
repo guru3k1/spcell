@@ -36,7 +36,7 @@ public class MyUI extends UI {
         Button button = new Button("Click Me");
         button.addClickListener( event -> {
             if(name.getValue()!=""){
-            	System.out.println(name.getValue());
+            	
             	marca = new Marca(name.getValue());
             	_marcaService.saveMarca(marca);
             }
