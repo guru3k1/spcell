@@ -27,11 +27,11 @@ public class Terminal implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idTerminal;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_marca")
 	private Marca marca;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name="id_modelo")
 	private Modelo modelo;
 	
@@ -53,6 +53,7 @@ public class Terminal implements Serializable{
 		this.marca = marca;
 		this.modelo = modelo;
 		this.numero_serie = numero_serie;
+		this.cliente = cliente;
 	}
 
 	public Long getIdTerminal() {
@@ -80,6 +81,14 @@ public class Terminal implements Serializable{
 	}
 	public void setNumero_serie(String numero_serie) {
 		this.numero_serie = numero_serie;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	} 
 	
 	

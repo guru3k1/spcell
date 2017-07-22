@@ -30,7 +30,7 @@ public class Marca implements Serializable{
 	private String marca;
 	
 	//Entidad Padre
-	@OneToMany (mappedBy="marca")
+	@OneToMany (mappedBy="marca",cascade = CascadeType.MERGE)
 	//@JoinColumn(name="id_marca")
 	private Set<Modelo>modelos;
 	
@@ -58,4 +58,8 @@ public class Marca implements Serializable{
 		this.marca = marca;
 	}
 	
+	public String toString (){
+		return marca;
+		
+	}
 }
